@@ -8,8 +8,8 @@ app.use(cors());
 app.use(express.json({ limit: '50mb' }));
 
 // 🔐 Pinata API credentials (server-side only)
-const PINATA_API_KEY = process.env.PINATA_API_KEY;
-const PINATA_SECRET = process.env.PINATA_SECRET;
+const PINATA_API_KEY = process.env.s1;
+const PINATA_SECRET = process.env.s2;
 
 // Fail fast if Render env vars are missing
 if (!PINATA_API_KEY || !PINATA_SECRET) {
