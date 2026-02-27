@@ -8,8 +8,8 @@ app.use(cors());
 app.use(express.json({ limit: '50mb' })); // Increase limit for encrypted files
 
 // 🔐 Pinata API credentials (server-side only)
-const PINATA_API_KEY = s1;
-const PINATA_SECRET = s2;
+const PINATA_API_KEY = process.env.PINATA_API_KEY;
+const PINATA_SECRET = process.env.PINATA_SECRET;
 
 // In-memory storage structure:
 // keyStorage[documentHash][walletAddress] = { encryptedSessionKey, mimeType, fileName }
